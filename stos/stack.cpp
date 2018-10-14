@@ -39,7 +39,6 @@ void stack::push(int a){
 int stack::pop(){
 	if (this->isEmpty()){
 		this->~stack();
-		delete this->dane;
 		assert(this->top>0);
 	}
 	return this->dane[--this->top];
