@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1518710864 source:c:\users\justii\downloads\justii-cpp-mariusz1306-patch-1\justii-cpp-mariusz1306-patch-1\teststack.cpp
+	<stdio.h>
+	"stack.h"
+
+1518710870 c:\users\justii\downloads\justii-cpp-mariusz1306-patch-1\justii-cpp-mariusz1306-patch-1\stack.h
+
+1518712600 source:c:\users\justii\downloads\justii-cpp-mariusz1306-patch-1\justii-cpp-mariusz1306-patch-1\stack.cpp
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+	<algorithm>
+
