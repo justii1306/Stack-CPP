@@ -5,17 +5,16 @@
 #include <algorithm>
 
 #define initSTACKSIZE 3
-int stacksize = initSTACKSIZE;
 
 stack::stack(){
 	this->top=0;
-
-	this->dane = new int [stacksize];
+    this->ssize=initSTACKSIZE;
+	this->dane = new int [this->ssize];
 	assert(this->dane);
 }
 
 stack::~stack(){
-    delete this->dane;
+    delete[] this->dane;
 }
 
 void stack::clear(){
@@ -24,13 +23,13 @@ void stack::clear(){
 
 void stack::push(int a){
 
-	if (this->top>=stacksize){
-	    int tempstacksize = stacksize;
-            stacksize *= 2;
+	if (this->top>=this->ssize){
+	    int tempstacksize = this->ssize;
+            this->ssize *= 2;
 	    int *tempdane = new int [tempstacksize];
 	    std::copy(this->dane, this->dane+tempstacksize, tempdane);
 	    delete this->dane;
-	    this->dane = new int[stacksize];
+	    this->dane = new int[this->ssize];
 	    std::copy(tempdane, tempdane+tempstacksize, this->dane);
         }
 	this->dane[this->top++]=a;

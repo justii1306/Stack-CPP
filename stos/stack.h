@@ -10,5 +10,6 @@ bool isEmpty();
 private:
 int top;
 int *dane;
+int ssize;
 };
 
